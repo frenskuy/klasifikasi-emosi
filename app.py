@@ -73,7 +73,7 @@ uploaded_file = st.file_uploader("Upload gambar wajah (jpeg/jpg/png)", type=["jp
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Gambar yang diunggah", use_column_width=True)
+    st.image(image, caption="Gambar yang diunggah", use_container_width=True)
 
     # Proses & prediksi
     input_tensor = preprocess_image(image)
